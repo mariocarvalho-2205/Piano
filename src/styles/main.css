@@ -1,0 +1,127 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #c5e7ff;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+}
+
+.container {
+    width: 980px;
+    border-radius: 20px;
+    padding: 80px 40px;
+    background: #000;
+    color: #fff;
+    box-shadow: 6px 6px 8px #808080;
+}
+
+.container header {
+    color: #b2b2b2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h2 {
+    font-size: 1.6rem;
+}
+
+header .column {
+    display: flex;   
+    align-items: center;
+}
+
+header .column span {
+    font-weight: 600;
+    margin-right: 10px;
+    font-size: 1.19rem;
+}
+
+.volume-slider {
+    accent-color: #fff;  /* altera a cor da barra de volume */
+}
+
+.keys-check input {
+    width: 60px;
+    height: 30px;
+    appearance: none; /* Remove a aparencia do checkbox permitindo editar */
+    border-radius: 30px;
+    background: #4b4b4b;
+    cursor: pointer;
+    position: relative;  /* o elemento pai sempre será relativo ao filho */
+}
+
+/* pseudo-elemento para criar o checked */
+.keys-check input::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 0.3rem;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+
+/* pseudo-elemento para criar efeito no checked */
+.keys-check input:checked::before {
+    left: 2.1rem;
+    background: #28cb07;
+}
+
+/* Estilizando as teclas */
+.piano-keys {
+    display: flex;
+    margin-top: 40px;
+}
+
+.piano-keys .key {
+    cursor: pointer;
+    user-select: none;
+    color: #a2a2a2;
+    position: relative;
+}
+
+.piano-keys .white {
+    width: 7rem;
+    height: 23rem;
+    background: linear-gradient(#fff 96%, #eee 4%);
+    border-radius: 0 0 8px 8px;
+    border: 1px solid #a2a2a2;
+}
+
+.piano-keys .black{
+    width: 4rem;
+    height: 14rem;
+    z-index: 2;
+    margin: 0 -32px 0 -32px;
+    background: linear-gradient(#333, #000);
+    border-radius: 0 0 5px 5px;
+    border: 1px solid #a2a2a2;
+}
+
+.piano-keys span {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.13rem;
+    
+}
+
+.piano-keys .white:active {
+    box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to bottom #fff 0%, #eee 100% );
+}
+
+.piano-keys .black:active {
+    box-shadow: inset -5px 5px 20px rgba(255, 255, 255, 0.2);
+    background: linear-gradient(to bottom #000, #434343 );
+}
+
+
