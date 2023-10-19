@@ -31,8 +31,13 @@ let handleVolume = (e) => {
 
 volume.addEventListener('input', handleVolume)
 
-// keysCheck.addEventListener('click', showHideKeys)
-//     let pianoKeysSpan = document.querySelectorAll('.piano-keys .key .texto-teclas')
+const showHideKeys = () => {
+    pianokeys.forEach((key) => {
+        key.classList.toggle('hide')
+    })
+}
+
+keysCheck.addEventListener('click', showHideKeys)
 //     console.log(pianoKeysSpan)
 //     if (e.target.checked === true) {
 //         pianoKeysSpan.classList.add('hide')
