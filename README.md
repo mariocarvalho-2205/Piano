@@ -15,7 +15,7 @@
 ###
 
 <p align="left">Por gostar de musica, fiz esse projetinho de um piano musical utilizando a tecnologia Javascript.</p>
-<a align="left" href="http://https://mariocarvalho-2205.github.io/Piano/" target='_blank'>Confere o projeto aqui</a>
+<a align="left" href="https://mariocarvalho-2205.github.io/Piano/" target="_blank">Confere o projeto aqui</a>
 
 ###
 
